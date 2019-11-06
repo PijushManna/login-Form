@@ -32,9 +32,7 @@ if (isset($_POST['upload'])) {
 if (isset($_POST['download'])) {
     $download = new CookiesHandler();
     echo $download->readCookies($name);
-} else {
-    echo "Data is Empty";
-}
+} 
 
 if (isset($_POST['deleteCookie'])) {
     $_COOKIE[$name] = "";
