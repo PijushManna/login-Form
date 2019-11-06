@@ -28,13 +28,12 @@ if (isset($_POST['upload'])) {
         echo "<h2>Data is Empty</h2>";
     }
 }
+
 if (isset($_POST['download'])) {
-    if (isset($_COOKIE[$name])) {
-        $download = new CookiesHandler();
-        echo "<h3>".$download->readCookies($name)."</h3>";
-    } else {
-        echo "Data is Empty";
-    }
+    $download = new CookiesHandler();
+    echo $download->readCookies($name);
+} else {
+    echo "Data is Empty";
 }
 
 if (isset($_POST['deleteCookie'])) {
